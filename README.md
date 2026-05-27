@@ -16,7 +16,7 @@ MQTT topics: `openpiste/{piste_id}/software/efp1` (CMS→apparatus) and `openpis
 ## Install on Raspberry Pi
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/pietwauters/openpiste-bridge/main/install-on-pi.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/pietwauters/openpiste-bridge/main/install-on-pi.sh)
 ```
 
 The script clones this repo, runs `npm install`, copies `config.example.json` → `config.json`, and registers a systemd service that starts automatically at boot.
