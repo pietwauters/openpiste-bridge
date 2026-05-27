@@ -42,6 +42,10 @@ Copy `config.example.json` to `config.json` and adjust:
 | `networkInterface` | Interface to add IP aliases on, e.g. `eth0` |
 | `pistes` | Array of `{ "number": N, "id": "..." }` entries |
 
+## Protocol specification
+
+This bridge implements the UDP–MQTT relay described in **[OpenPiste Protocol — Level 1](https://github.com/pietwauters/esp32scoringdeviceMqtt/blob/opp2-canonical-state/docs/level1.md)** (§7 "The UDP–MQTT bridge"). That document covers topic structure, QoS rules, deployment scenarios, and the fixed-IP constraint.
+
 ## Part of OpenPiste
 
 This bridge is part of the [OpenPiste](https://github.com/pietwauters/esp32scoringdeviceMqtt) platform — open source electronics for fencing competitions.
