@@ -44,7 +44,7 @@ Copy `config.example.json` to `config.json` and adjust:
 
 ## Protocol specification
 
-This bridge implements the UDP–MQTT relay described in **[OpenPiste Protocol — Level 1](https://github.com/pietwauters/esp32scoringdeviceMqtt/blob/opp2-canonical-state/docs/level1.md)** (§7 "The UDP–MQTT bridge"). That document covers topic structure, QoS rules, deployment scenarios, and the fixed-IP constraint.
+This bridge implements the UDP–MQTT relay described in **[OpenPiste Protocol — Level 1](https://github.com/pietwauters/esp32scoringdeviceMqtt/blob/main/docs/level1.md)** (§7 "The UDP–MQTT bridge"). That document covers topic structure, QoS rules, deployment scenarios, and the fixed-IP constraint.
 
 ## Part of OpenPiste
 
