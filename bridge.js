@@ -81,6 +81,10 @@ mqttClient.on('reconnect',  ()  => log('[MQTT] Reconnecting...'));
 
 // ── Per-piste UDP sockets ─────────────────────────────────────────────────────
 
+// Single MQTT→UDP dispatcher: maps apparatus topic → send function.
+// Using one 'message' listener avoids MaxListenersExceededWarning with many pistes.
+const mqttDispatch = new Map();
+
 pistes.forEach(piste => {
   const ip   = pisteIp(piste.number);
   const sock = dgram.createSocket('udp4');
@@ -106,8 +110,7 @@ pistes.forEach(piste => {
     log(`[${piste.id}] Listening on UDP ${ip}:${udpPort}`));
 
   // MQTT → UDP: apparatus publishes INFO/NEXT/PREV; forward to CMS
-  mqttClient.on('message', (topic, payload) => {
-    if (topic !== `openpiste/${piste.id}/apparatus/efp1`) return;
+  mqttDispatch.set(`openpiste/${piste.id}/apparatus/efp1`, payload => {
     if (!cmsIp) {
       log(`[${piste.id}] MQTT→UDP skipped — CMS address not yet known`);
       return;
@@ -119,6 +122,11 @@ pistes.forEach(piste => {
   });
 
   log(`[${piste.id}] Configured — IP ${ip}:${udpPort}`);
+});
+
+mqttClient.on('message', (topic, payload) => {
+  const dispatch = mqttDispatch.get(topic);
+  if (dispatch) dispatch(payload);
 });
 
 log(`[bridge] Started — ${pistes.length} piste(s)`);
