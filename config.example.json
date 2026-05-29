@@ -1,11 +1,73 @@
 {
-  "mqttBroker":      "mqtt://localhost",
-  "udpPort":         50100,
-  "subnet":          "192.168.0",
-  "ipBase":          100,
-  "networkInterface":"eth0",
+  "mqttBroker": "mqtt://localhost",
+  "udpPort": 50100,
+  "subnet": "192.168.0",
+  "ipBase": 100,
+  "networkInterface": "eth0",
   "pistes": [
-    { "number": 1, "id": "1" },
-    { "number": 2, "id": "2" }
+    {
+      "number": 1,
+      "id": "Podium"
+    },
+    {
+      "number": 2,
+      "id": "Red"
+    },
+    {
+      "number": 3,
+      "id": "Green"
+    },
+    {
+      "number": 4,
+      "id": "Blue"
+    },
+    {
+      "number": 5,
+      "id": "Yellow"
+    },
+    {
+      "number": 6,
+      "id": "6"
+    },
+    {
+      "number": 7,
+      "id": "7"
+    },
+    {
+      "number": 8,
+      "id": "8"
+    },
+    {
+      "number": 9,
+      "id": "9"
+    },
+    {
+      "number": 10,
+      "id": "10"
+    },
+    {
+      "number": 11,
+      "id": "11"
+    },
+    {
+      "number": 12,
+      "id": "12"
+    },
+    {
+      "number": 13,
+      "id": "13"
+    },
+    {
+      "number": 14,
+      "id": "14"
+    },
+    {
+      "number": 15,
+      "id": "15"
+    },
+    {
+      "number": 16,
+      "id": "16"
+    }
   ]
 }
