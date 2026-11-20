@@ -1,4 +1,5 @@
 {
+  "mode": "cms-side",
   "mqttBroker": "mqtt://localhost",
   "udpPort": 50100,
   "subnet": "192.168.0",

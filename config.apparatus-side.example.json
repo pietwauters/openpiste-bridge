@@ -1,0 +1,24 @@
+{
+  "mode": "apparatus-side",
+  "mqttBroker": "mqtt://192.168.0.10",
+  "udpPort": 50100,
+  "cmsIp": "192.168.0.20",
+  "subnet": "192.168.0",
+  "ipBase": 100,
+  "networkInterface": "eth0",
+  "pistes": [
+    {
+      "number": 1,
+      "id": "Podium"
+    },
+    {
+      "number": 2,
+      "id": "Red"
+    },
+    {
+      "number": 3,
+      "id": "Green",
+      "ip": "192.168.0.57"
+    }
+  ]
+}
